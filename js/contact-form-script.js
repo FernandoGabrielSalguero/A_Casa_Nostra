@@ -53,3 +53,18 @@ function submitMSG(valid, msg){
     }
     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 }
+
+// ENVIAR FORMULARIO DE RESERVA POR WHATSAPP
+function sendMessageWhatsApp() {
+    // Obtener los valores del formulario
+    var name = encodeURIComponent(document.querySelector('input[name="name"]').value);
+    var phone = encodeURIComponent(document.querySelector('input[name="phone"]').value);
+    var message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
+
+
+    var whatsappMessage = `NOMBRE: ${name}. CELULAR: ${phone}. ${message}`
+
+        console.log(whatsappMessage);
+
+    window.location.href = "https://wa.me/2613624284?text=" + whatsappMessage;
+}

@@ -430,27 +430,27 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-12">
-					<form id="contactForm">
+					<form action="https://wa.me/2613624284" method="get" target="_blank" id="contactForm">
 						<div class="row">
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="text" class="form-control" id="name" name="name" placeholder="Ingrese su nombre" required data-error="Por favor ingrese su nombre">
+									<input type="text" class="form-control" id="name" name="name" autocomplete="off" placeholder="Nombre" required data-error="Por favor ingrese su nombre">
 									<div class="help-block with-errors"></div>
 								</div>                                 
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="text" placeholder="Ingrese su celular" id="email" class="form-control" name="name" required data-error="Por favor ingrese su número de celular">
+									<input type="tel" autocomplete="off" placeholder="Telefono" id="email" class="form-control" name="phone" required data-error="Por favor ingrese su número de celular">
 									<div class="help-block with-errors"></div>
 								</div> 
 							</div>
 							<div class="col-md-12">
 								<div class="form-group"> 
-									<textarea class="form-control" id="message" placeholder="Ingrese su pedido" rows="4" data-error="Escriba su pedido" required></textarea>
+									<textarea class="form-control" id="message" name="message" autocomplete="off" placeholder="Ingrese su mensaje" rows="4" data-error="Escriba su pedido" required></textarea>
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="submit-button text-center">
-									<button class="btn btn-common" id="submit" type="submit">Enviar mensaje</button>
+									<button class="btn btn-common" id="submit" type="submit" onclick="sendMessageWhatsApp()">Enviar</button>
 									<div class="clearfix"></div> 
 								</div>
 							</div>
