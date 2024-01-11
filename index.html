@@ -56,15 +56,11 @@
           </li>
 
           <li class="nav-item">
-            <a href="#about" class="navbar-link" data-nav-link>Sobre Nosotros</a>
-          </li>
-
-          <li class="nav-item">
             <a href="#food-menu" class="navbar-link" data-nav-link>Menu</a>
           </li>
 
           <li class="nav-item">
-            <a href="#" class="navbar-link" data-nav-link>Comprar</a>
+            <a href="#hace_tu_pedido" class="navbar-link" data-nav-link>Hace tu pedido</a>
           </li>
 
         </ul>
@@ -140,7 +136,7 @@
             <img src="./assets/images/hero-banner-bg.png" width="820" height="716" alt="" aria-hidden="true"
               class="w-100 hero-img-bg">
 
-            <img src="./assets/images/hero-banner.png" width="700" height="637" loading="lazy" alt="Burger"
+            <img src="./assets/images/pizza.png" width="7000" height="637" loading="lazy" alt="Burger"
               class="w-100 hero-img">
           </figure>
 
@@ -892,7 +888,7 @@
     - #FOOTER
   -->
 
-  <footer class="footer">
+  <footer class="footer" id="hace_tu_pedido">
 
     <div class="footer-top" style="background-image: url('./assets/images/footer-illustration.png')">
       <div class="container">
@@ -971,36 +967,103 @@
 
         </ul>
 
-        <form action="" class="footer-form">
+        <form action="https://wa.me/2613055907" method="get" target="_blank" class="footer-form" id="miFormulario">
 
           <p class="footer-list-title">Hacenos tu pedido</p>
 
           <div class="input-wrapper">
 
-            <input type="text" name="full_name" required placeholder="Nombre" aria-label="Nombre"
-              class="input-field">
-
-            <input type="email" name="telefono" required placeholder="telefono" aria-label="telefono"
-              class="input-field">
+            <input type="text" name="name" required placeholder="Nombre" aria-label="Nombre" class="input-field">
 
           </div>
 
-          <div class="input-wrapper">
+          <!-- <div class="asdasdasd">
+            <label>
+              <input type="checkbox" name="pedido" value="A Casa Nostra"> A Casa Nostra
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Especial"> Especial
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Marinera"> Marinera
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Capresa"> Capresa
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Focaccia"> Focaccia
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Fugazza"> Fugazza
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Hawaiana"> Hawaiana
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Lomo - A Casa Nostra"> Lomo - A Casa Nostra
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Pizza de la casa"> Pizza de la casa
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Favorita"> Favorita
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Nuestros Hijos"> Nuestros Hijos
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Jamòn"> Jamòn
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Salame"> Salame
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Sabrosita"> Sabrosita
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Sol de oriente"> Sol de oriente
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Cuatro Quesos"> Cuatro Quesos
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Parmigiana"> Parmigiana
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Yola"> Yola
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Adriática"> Adriática
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Capri"> Capri
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Ramagnola"> Ramagnola
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Muzza"> Muzza
+            </label>
+            <label>
+              <input type="checkbox" name="pedido" value="Trinacria"> Trinacria
+            </label>
+          </div> -->
 
-            <select name="pedido" aria-label="Pedido" class="input-field">
-              <option value="person">Selecciona tu producto</option>
-              <option value="2 person">2 Person</option>
-              <option value="3 person">3 Person</option>
-              <option value="4 person">4 Person</option>
-              <option value="5 person">5 Person</option>
-            </select>
+          <select name="person" class="input-field" multiple>
+            <option value="1-persona">1 Persona</option>
+            <option value="2-personas">2 Personas</option>
+            <option value="3-personas">3 Personas</option>
+            <option value="4-personas">4 Personas</option>
+            <option value="5-personas">5 Personas</option>
+            <option value="6-personas">6 Personas</option>
+            <option value="7-personas">7 Personas</option>
+        </select>
 
-          </div>
 
-          <textarea name="Comentarios" required placeholder="Comentarios" aria-label="Comentarios" class="input-field"></textarea>
+          <textarea name="message" required placeholder="Comentarios" aria-label="Comentarios"
+            class="input-field"></textarea>
 
-          <button type="submit" class="btn">Hace el pedido</button>
-
+          <button type="submit" class="btn" onclick="capturarDatos()">Hace el pedido</button>
         </form>
 
       </div>

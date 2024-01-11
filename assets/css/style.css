@@ -1767,3 +1767,15 @@ textarea.input-field {
   .footer-top .container { grid-template-columns: 1.4fr 1fr 1fr 1.6fr; }
 
 }
+
+
+
+.asdasdasd label {
+  display: inline-grid;
+  margin: 10px;
+  
+}
+
+.asdasdasd input {
+  margin-right: 2px;
+}
