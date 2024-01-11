@@ -100,14 +100,17 @@ window.addEventListener("scroll", function () {
 function prepareWhatsAppMessage() {
   // Obtener los valores del formulario
   var name = encodeURIComponent(document.querySelector('input[name="name"]').value);
-  var seleccion = encodeURIComponent(document.querySelector('select[name="seleccion"]').value);
+  var seleccionOptions = document.querySelectorAll('select[name="seleccion"] option:checked');
+  
+  // Obtener los valores seleccionados del elemento select
+  var seleccion = Array.from(seleccionOptions).map(option => encodeURIComponent(option.value)).join(', ');
+
   var message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
 
-
   var whatsappMessage = "¡Hola! Quiero hacer un pedido.%0A%0A" +
-      "Mi nombre es: " + name + ". Quiero pedir: " + seleccion + ". Ademàs: " + message;
+      "Mi nombre es: " + name + ". Quiero pedir: " + seleccion + ". Además: " + message;
 
-      console.log(whatsappMessage);
+  console.log(whatsappMessage);
 
   window.location.href = "https://wa.me/2613055907?text=" + whatsappMessage;
 }
