@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-
 'use strict';
 
 
@@ -57,10 +55,13 @@ const searchCloseBtn = document.querySelector("[data-search-close-btn]");
 const searchBoxElems = [searchBtn, searchSubmitBtn, searchCloseBtn];
 
 for (let i = 0; i < searchBoxElems.length; i++) {
-  searchBoxElems[i].addEventListener("click", function () {
-    searchContainer.classList.toggle("active");
-    document.body.classList.toggle("active");
-  });
+  const elem = searchBoxElems[i];
+  if (elem) {
+    elem.addEventListener("click", function () {
+      searchContainer.classList.toggle("active");
+      document.body.classList.toggle("active");
+    });
+  }
 }
 
 
@@ -109,4 +110,3 @@ function prepareWhatsAppMessage() {
   window.location.href = "https://wa.me/2613055907?text=" + whatsappMessage;
 }
 
-});
