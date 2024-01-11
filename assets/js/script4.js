@@ -108,10 +108,10 @@ function prepareWhatsAppMessage() {
   var message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
 
   var whatsappMessage = "¡Hola! Quiero hacer un pedido.%0A%0A" +
-      "Mi nombre es: " + name + ". Quiero pedir: " + seleccion + ". Además: " + message;
+      "Mi nombre es:" + name + ".Quiero pedir:" + seleccion + ". Además:" + message;
 
   console.log(whatsappMessage);
 
-  window.location.href = "https://wa.me/2613055907?text=" + whatsappMessage;
+  window.location.href = "https://wa.me/2615172248?text=" + whatsappMessage;
 }
 
