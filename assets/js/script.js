@@ -104,7 +104,7 @@ function prepareWhatsAppMessage() {
   var message = encodeURIComponent(document.querySelector('textarea[name="message"]').value);
 
 
-  var whatsappMessage = "¡Hola! Quiero hacer una reserva.%0A%0A" +
+  var whatsappMessage = "¡Hola! Quiero hacer un pedido.%0A%0A" +
       "Mi nombre es: " + name + ". Quiero pedir: " + seleccion + ". Ademàs: " + message;
 
       console.log(whatsappMessage);
