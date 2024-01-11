@@ -962,7 +962,7 @@
 
         </ul>
 
-        <form action="https://wa.me/2613055907" method="get" target="_blank" class="footer-form" id="miFormulario">
+        <form onsubmit="prepareWhatsAppMessage(); return false;" class="footer-form" id="miFormulario">
 
           <p class="footer-list-title">Hacenos tu pedido</p>
 
@@ -1005,7 +1005,7 @@
           <textarea name="message" required placeholder="Comentarios" aria-label="Comentarios"
             class="input-field"></textarea>
 
-          <button type="submit" class="btn" onclick="capturarDatos()">Hace el pedido</button>
+            <button type="submit" class="btn">Hace el pedido</button>
         </form>
 
       </div>
