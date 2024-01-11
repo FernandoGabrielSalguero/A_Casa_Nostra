@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {
+
 'use strict';
 
 
@@ -107,3 +109,4 @@ function prepareWhatsAppMessage() {
   window.location.href = "https://wa.me/2613055907?text=" + whatsappMessage;
 }
 
+});
