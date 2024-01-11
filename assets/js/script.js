@@ -47,22 +47,24 @@ window.addEventListener("scroll", function () {
  * search box toggle
  */
 
-const searchBtn = document.querySelector("[data-search-btn]");
-const searchContainer = document.querySelector("[data-search-container]");
-const searchSubmitBtn = document.querySelector("[data-search-submit-btn]");
-const searchCloseBtn = document.querySelector("[data-search-close-btn]");
+document.addEventListener("DOMContentLoaded", function () {
+  const searchBtn = document.querySelector("[data-search-btn]");
+  const searchContainer = document.querySelector("[data-search-container]");
+  const searchSubmitBtn = document.querySelector("[data-search-submit-btn]");
+  const searchCloseBtn = document.querySelector("[data-search-close-btn]");
 
-const searchBoxElems = [searchBtn, searchSubmitBtn, searchCloseBtn];
+  const searchBoxElems = [searchBtn, searchSubmitBtn, searchCloseBtn];
 
-for (let i = 0; i < searchBoxElems.length; i++) {
-  const elem = searchBoxElems[i];
-  if (elem) {
-    elem.addEventListener("click", function () {
-      searchContainer.classList.toggle("active");
-      document.body.classList.toggle("active");
-    });
+  for (let i = 0; i < searchBoxElems.length; i++) {
+    const elem = searchBoxElems[i];
+    if (elem) {
+      elem.addEventListener("click", function () {
+        searchContainer.classList.toggle("active");
+        document.body.classList.toggle("active");
+      });
+    }
   }
-}
+});
 
 
 
