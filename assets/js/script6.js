@@ -117,3 +117,8 @@ function prepareWhatsAppMessage() {
   window.location.href = "https://wa.me/2615172248?text=" + whatsappMessage;
 }
 
+function irAPedidosYA() {
+  // Cambia la URL a la que quieres redirigir
+  var nuevaVentana = window.open('https://www.pedidosya.com.ar/restaurantes/las-heras/a-casa-nostra-menu', '_blank');
+  nuevaVentana.focus();
+}
